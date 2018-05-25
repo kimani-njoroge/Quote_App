@@ -13,6 +13,12 @@ export class QuoteComponent implements OnInit {
     new Quote(3,'quote3','Ohana','lilo n stitch'),
   ]
 
+  deleteQuote(isComplete,index){
+    if (isComplete){
+      this.quotes.splice(index,1)
+    }
+  }
+
   constructor() { }
 
   ngOnInit() {
