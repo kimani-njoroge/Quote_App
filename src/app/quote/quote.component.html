@@ -5,7 +5,7 @@
   </div>
 </div>
 
-  <div *ngFor='let quote of quotes'>
+  <div *ngFor='let quote of quotes;let i = index'>
     <li>{{quote.quoteDisplay}}</li>
     <app-quote-info [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-info>
   </div>
