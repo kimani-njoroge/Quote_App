@@ -8,4 +8,13 @@
   <div *ngFor='let quote of quotes;let i = index'>
     <li>{{quote.quoteDisplay}}</li>
     <app-quote-info [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-info>
+
+    <div class="row">
+      <div (click)="upV(i)" class="col-md-6">
+        Upvote : {{quote.upvote}}
+      </div>
+      <div (click)="downV(i)" class="col-md-6">
+        Downvote : {{quote.downvote}}
+      </div>
+    </div>
   </div>

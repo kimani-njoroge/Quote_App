@@ -9,6 +9,13 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
   quotes = []
 
+  upV(id){
+    this.quotes[id].upvote+=1
+  }
+  downV(id){
+    this.quotes[id].downvote+=1
+  }
+
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
