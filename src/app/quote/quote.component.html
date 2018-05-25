@@ -1,7 +1,11 @@
 <h1>Quote</h1>
-<ul>
+<div class="container">
+  <div class="row">
+    <app-quote-info></app-quote-info>
+  </div>
+</div>
+
   <div *ngFor='let quote of quotes'>
     <li>{{quote.quoteDisplay}}</li>
     <app-quote-info [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-info>
   </div>
-</ul>
