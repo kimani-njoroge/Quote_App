@@ -7,11 +7,13 @@ import { Quote } from '../quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quotes = [
-    new Quote(1,'quote1','Don Giovanni','kimani'),
-    new Quote(2,'quote2','paulo coelho','anna'),
-    new Quote(3,'quote3','Ohana','lilo n stitch'),
-  ]
+  quotes = []
+
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    this.quotes.push(quote)
+  }
 
   deleteQuote(isComplete,index){
     if (isComplete){
