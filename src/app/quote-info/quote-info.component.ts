@@ -8,8 +8,6 @@ import { Quote } from '../quote'
 })
 export class QuoteInfoComponent implements OnInit {
 
-  newQuote = new Quote(0,"","","");
-
   @Input() quote=Quote;
   @Output() isComplete = new EventEmitter<boolean>();
 

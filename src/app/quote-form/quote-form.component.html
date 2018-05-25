@@ -1,6 +1,6 @@
 <div class="conatainer-fluid">
   <div class="row">
-    <form #quoteForm='ngForm'>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
       <div class="form-group">
         <label for="quote">Enter Quote:</label>
         <textarea class="form-control" id="quote" rows="8" [(ngModel)]="newQuote.quoteDisplay" name="quoteDisplay" #quoteDisplay="ngModel"></textarea>
