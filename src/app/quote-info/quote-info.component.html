@@ -1,5 +1,6 @@
 <div class="container">
   <p>Author:{{quote.author}} and submitted by:{{quote.submittedBy}}</p>
-  
+  <p>{{quote.timePost | timeAgo}}</p>
+
   <button (click)='quoteDelete(true)'>Delete Quote</button>
 </div>
