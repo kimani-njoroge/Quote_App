@@ -6,7 +6,9 @@
 </div>
 
   <div *ngFor='let quote of quotes;let i = index'>
-    <li>{{quote.quoteDisplay}}</li>
+    <p appHighlight *ngIf="getHighest()===quote.upvote && quote.upvote>0">{{quote.quoteDisplay}}</p>
+    <p *ngIf="getHighest()!==quote.upvote || quote.upvote===0">{{quote.quoteDisplay}}</p>
+
     <app-quote-info [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-info>
 
     <div class="row">

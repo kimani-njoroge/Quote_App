@@ -27,6 +27,15 @@ export class QuoteComponent implements OnInit {
       this.quotes.splice(index,1)
     }
   }
+  public voteGet(i){
+    return this.quotes[i].upvote-this.quotes[i].downvote
+  }
+  getHighest(){
+    var highestVotes = this.quotes.reduce(function(l,e){
+      return e.upvote > l.upvote ? e : l;
+    })
+    return highestVotes.upvote;
+  }
 
   constructor() { }
 

@@ -4,7 +4,7 @@ import { Pipe, PipeTransform, NgZone, ChangeDetectorRef, OnDestroy } from '@angu
   name: 'timeAgo',
   pure:false
 })
-export class TimeAgoPipe implements PipeTransform , OnDestroy{
+export class TimeAgoPipe implements PipeTransform , OnDestroy {
   private timer:number;
   constructor(private ChangeDetectorRef:ChangeDetectorRef, private NgZone: NgZone){}
   transform(value:string) {
@@ -18,7 +18,7 @@ export class TimeAgoPipe implements PipeTransform , OnDestroy{
         return window.setTimeout(()=> {
           this.NgZone.run(()=>this.ChangeDetectorRef.markForCheck());
 
-        }, postToUpdate);
+        },postToUpdate);
       }
       return null;
     });
