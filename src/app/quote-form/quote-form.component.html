@@ -2,19 +2,19 @@
   <div class="row">
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
       <div class="form-group">
-        <label for="quote">Enter Quote:</label>
+        <label id="label"for="quote">Enter Quote:</label>
         <textarea class="form-control" id="quote" rows="8" [(ngModel)]="newQuote.quoteDisplay" name="quoteDisplay" #quoteDisplay="ngModel"></textarea>
       </div>
       <div class="form-group">
-        <label for="author">Author:</label>
+        <label id="label" for="author">Author:</label>
         <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel">
       </div>
       <div class="form-group">
-        <label for="submittedBy">Submitted By:</label>
+        <label id="label" for="submittedBy">Submitted By:</label>
         <input type="text" class="form-control" id="submittedBy" [(ngModel)]="newQuote.submittedBy" name="submittedBy" #submittedBy="ngModel">
       </div>
 
-      <button type="submit">Add Quote</button>
+      <button class="btn btn-outline-info" type="submit">Add Quote</button>
     </form>
   </div>
 </div>

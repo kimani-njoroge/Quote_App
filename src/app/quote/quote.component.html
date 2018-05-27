@@ -1,11 +1,9 @@
-<h1>Quote</h1>
 <div class="container">
-  <div class="row">
+  <h1>Quote</h1>
+  <div class="note row">
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
-</div>
-
-  <div *ngFor='let quote of quotes;let i = index'>
+  <div class="container-fluid" *ngFor='let quote of quotes;let i = index'>
     <p appHighlight *ngIf="getHighest()===quote.upvote && quote.upvote>0">{{quote.quoteDisplay}}</p>
     <p *ngIf="getHighest()!==quote.upvote || quote.upvote===0">{{quote.quoteDisplay}}</p>
 
@@ -20,3 +18,5 @@
       </div>
     </div>
   </div>
+
+</div>
