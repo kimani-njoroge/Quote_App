@@ -8,6 +8,7 @@ import { Quote } from './quote'
 })
 export class AppComponent {
   quotes = [
+    new Quote(0,'dfdsf','ssdfsdf','dsaf',0,0,new Date("a few ago"))
   ]
 
 }
